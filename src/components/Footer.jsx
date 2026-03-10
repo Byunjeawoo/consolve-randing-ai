@@ -1,0 +1,88 @@
+import { Zap, Github, Linkedin, Mail } from 'lucide-react'
+
+const footerLinks = {
+  서비스: [
+    { label: 'RPA / 업무 자동화', href: '#services' },
+    { label: '웹 스크래핑', href: '#services' },
+    { label: 'API 연동', href: '#services' },
+    { label: 'AI / ML 통합', href: '#services' },
+    { label: '문서 자동화', href: '#services' },
+  ],
+  회사: [
+    { label: '프로세스', href: '#process' },
+    { label: '기술 스택', href: '#tech' },
+    { label: '고객 후기', href: '#testimonials' },
+    { label: '요금제', href: '#pricing' },
+    { label: '문의하기', href: '#contact' },
+  ],
+}
+
+export default function Footer() {
+  const year = new Date().getFullYear()
+
+  return (
+    <footer className="bg-slate-900 text-slate-400" aria-label="푸터">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-10">
+          {/* Brand */}
+          <div className="md:col-span-2">
+            <a href="#" className="inline-flex items-center gap-2 mb-4 group focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-lg">
+              <div className="w-8 h-8 rounded-lg gradient-bg flex items-center justify-center shadow-md">
+                <Zap size={16} className="text-white" aria-hidden="true" />
+              </div>
+              <span className="font-bold text-xl text-white">Consolve</span>
+            </a>
+            <p className="text-sm leading-relaxed text-slate-400 max-w-xs mb-6">
+              자동화 프로그램 전문 개발 외주 파트너.
+              반복 업무를 자동화하여 비즈니스 효율을 극대화합니다.
+            </p>
+            <div className="flex gap-3">
+              {[
+                { icon: Mail, href: 'mailto:contact@consolve.kr', label: '이메일' },
+                { icon: Github, href: '#', label: 'GitHub' },
+                { icon: Linkedin, href: '#', label: 'LinkedIn' },
+              ].map(({ icon: Icon, href, label }) => (
+                <a
+                  key={label}
+                  href={href}
+                  aria-label={label}
+                  className="w-9 h-9 rounded-lg bg-slate-800 border border-slate-700 flex items-center justify-center text-slate-400 hover:text-white hover:bg-slate-700 transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+                >
+                  <Icon size={16} aria-hidden="true" />
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Links */}
+          {Object.entries(footerLinks).map(([group, links]) => (
+            <div key={group}>
+              <h3 className="text-sm font-semibold text-white mb-4">{group}</h3>
+              <ul className="space-y-3">
+                {links.map((link) => (
+                  <li key={link.label}>
+                    <a
+                      href={link.href}
+                      className="text-sm text-slate-400 hover:text-white transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded"
+                    >
+                      {link.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        {/* Bottom */}
+        <div className="border-t border-slate-800 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-600">
+          <p>© {year} Consolve. All rights reserved.</p>
+          <div className="flex gap-6">
+            <a href="#" className="hover:text-slate-400 transition-colors">개인정보처리방침</a>
+            <a href="#" className="hover:text-slate-400 transition-colors">이용약관</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  )
+}
