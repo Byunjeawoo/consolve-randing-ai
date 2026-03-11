@@ -1,19 +1,20 @@
 @import "tailwindcss";
 
 :root {
-  --color-primary: #6366F1;
-  --color-primary-light: #818CF8;
+  --color-primary: #C2773A;
+  --color-primary-light: #D9955A;
   --color-cta: #F97316;
   --color-cta-hover: #EA6C0A;
-  --color-bg: #FAFAF7;
-  --color-text: #27272A;
-  --color-text-muted: #71717A;
-  --color-border: #E4E4E7;
+  --color-bg: #FFFBF5;
+  --color-text: #2C1A0E;
+  --color-text-muted: #7C5C45;
+  --color-border: #E8D5C0;
 }
 
 * {
   font-family: 'Noto Sans KR', sans-serif;
   box-sizing: border-box;
+  word-break: keep-all;
 }
 
 body {
@@ -30,7 +31,7 @@ body {
   color: var(--color-text);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23a5b4fc' fill-opacity='0.04'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d97706' fill-opacity='0.04'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
 .font-mono {
@@ -46,21 +47,21 @@ body {
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #6366F1, #EC4899);
+  background: linear-gradient(135deg, #C2773A, #E05B5B);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .gradient-bg {
-  background: linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%);
+  background: linear-gradient(135deg, #C2773A 0%, #D97706 100%);
 }
 
 .glass-card {
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 251, 245, 0.9);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(232, 213, 192, 0.6);
 }
 
 .animate-fade-up {
@@ -93,7 +94,7 @@ body {
 
 .bento-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 20px 40px rgba(99, 102, 241, 0.12);
+  box-shadow: 0 20px 40px rgba(194, 119, 58, 0.12);
 }
 
 .btn-primary {

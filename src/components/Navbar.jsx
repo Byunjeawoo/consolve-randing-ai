@@ -23,7 +23,7 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'glass-card shadow-lg shadow-slate-200/50'
+          ? 'glass-card shadow-lg shadow-stone-200/50'
           : 'bg-transparent'
       }`}
       aria-label="주 내비게이션"
@@ -33,13 +33,13 @@ export default function Navbar() {
           {/* Logo */}
           <a
             href="#"
-            className="flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-lg"
+            className="flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 rounded-lg"
             aria-label="Consolve 홈으로"
           >
             <div className="w-8 h-8 rounded-lg gradient-bg flex items-center justify-center shadow-md">
               <Zap size={16} className="text-white" aria-hidden="true" />
             </div>
-            <span className="font-bold text-xl text-slate-800 tracking-tight">
+            <span className="font-bold text-xl text-stone-800 tracking-tight">
               Consolve
             </span>
           </a>
@@ -50,7 +50,7 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded px-1"
+                className="text-sm font-medium text-stone-600 hover:text-amber-700 transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 rounded px-1"
               >
                 {link.label}
               </a>
@@ -65,7 +65,7 @@ export default function Navbar() {
 
           {/* Mobile menu button */}
           <button
-            className="md:hidden p-2 rounded-lg text-slate-600 hover:bg-slate-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 transition-colors duration-150"
+            className="md:hidden p-2 rounded-lg text-stone-600 hover:bg-stone-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 transition-colors duration-150"
             onClick={() => setIsOpen(!isOpen)}
             aria-expanded={isOpen}
             aria-controls="mobile-menu"
@@ -80,13 +80,13 @@ export default function Navbar() {
       {isOpen && (
         <div
           id="mobile-menu"
-          className="md:hidden glass-card border-t border-slate-200/60 px-4 pb-4 pt-2"
+          className="md:hidden glass-card border-t border-stone-200/60 px-4 pb-4 pt-2"
         >
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="block py-3 text-sm font-medium text-slate-700 hover:text-blue-600 transition-colors border-b border-slate-100 last:border-0"
+              className="block py-3 text-sm font-medium text-stone-700 hover:text-amber-700 transition-colors border-b border-stone-100 last:border-0"
               onClick={() => setIsOpen(false)}
             >
               {link.label}

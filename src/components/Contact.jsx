@@ -1,11 +1,10 @@
 import { useState } from 'react'
-import { Send, Mail, Phone, MapPin, CheckCircle, AlertCircle } from 'lucide-react'
+import { Send, Mail, Phone, MapPin, CheckCircle, AlertCircle, MessageCircle } from 'lucide-react'
 
 const serviceOptions = [
   'RPA / 업무 자동화',
   '웹 스크래핑 / 데이터 수집',
   'API 연동 자동화',
-  'AI / ML 통합',
   '문서 자동화',
   '챗봇 개발',
   '기타 (직접 입력)',
@@ -42,31 +41,29 @@ export default function Contact() {
     const errs = validate()
     if (Object.keys(errs).length > 0) {
       setErrors(errs)
-      // Focus first error field
       const firstKey = Object.keys(errs)[0]
       document.getElementById(`field-${firstKey}`)?.focus()
       return
     }
     setStatus('loading')
-    // Simulate API call
     await new Promise((res) => setTimeout(res, 1500))
     setStatus('success')
     setForm(initialState)
   }
 
   return (
-    <section id="contact" className="py-24 bg-slate-50" aria-labelledby="contact-heading">
+    <section id="contact" className="py-24 bg-stone-50" aria-labelledby="contact-heading">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Left: Info */}
           <div>
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-violet-100 text-violet-700 text-sm font-medium mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-100 text-amber-700 text-sm font-medium mb-6">
               무료 상담
             </div>
-            <h2 id="contact-heading" className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
+            <h2 id="contact-heading" className="text-3xl sm:text-4xl font-bold text-stone-900 mb-4">
               지금 바로 시작하세요
             </h2>
-            <p className="text-lg text-slate-500 mb-10 leading-relaxed">
+            <p className="text-lg text-stone-500 mb-10 leading-relaxed">
               자동화 도입이 망설여지신다면, 부담 없이 상담부터 시작하세요.
               30분 무료 상담을 통해 어떤 자동화가 가장 효과적인지 알아드립니다.
             </p>
@@ -74,34 +71,34 @@ export default function Contact() {
             {/* Contact info */}
             <div className="space-y-5">
               <div className="flex items-center gap-4">
-                <div className="w-11 h-11 rounded-xl bg-violet-50 flex items-center justify-center shrink-0">
-                  <Mail size={20} className="text-violet-600" aria-hidden="true" />
+                <div className="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center shrink-0">
+                  <Mail size={20} className="text-amber-700" aria-hidden="true" />
                 </div>
                 <div>
-                  <div className="text-sm font-semibold text-slate-800">이메일</div>
-                  <a href="mailto:contact@consolve.kr" className="text-sm text-violet-600 hover:underline">
+                  <div className="text-sm font-semibold text-stone-800">이메일</div>
+                  <a href="mailto:contact@consolve.kr" className="text-sm text-amber-700 hover:underline">
                     contact@consolve.kr
                   </a>
                 </div>
               </div>
               <div className="flex items-center gap-4">
-                <div className="w-11 h-11 rounded-xl bg-violet-50 flex items-center justify-center shrink-0">
-                  <Phone size={20} className="text-violet-600" aria-hidden="true" />
+                <div className="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center shrink-0">
+                  <Phone size={20} className="text-amber-700" aria-hidden="true" />
                 </div>
                 <div>
-                  <div className="text-sm font-semibold text-slate-800">전화 상담</div>
-                  <a href="tel:02-0000-0000" className="text-sm text-violet-600 hover:underline">
-                    02-0000-0000
+                  <div className="text-sm font-semibold text-stone-800">전화 상담</div>
+                  <a href="tel:010-7731-7146" className="text-sm text-amber-700 hover:underline">
+                    010-7731-7146
                   </a>
                 </div>
               </div>
               <div className="flex items-center gap-4">
-                <div className="w-11 h-11 rounded-xl bg-violet-50 flex items-center justify-center shrink-0">
-                  <MapPin size={20} className="text-violet-600" aria-hidden="true" />
+                <div className="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center shrink-0">
+                  <MapPin size={20} className="text-amber-700" aria-hidden="true" />
                 </div>
                 <div>
-                  <div className="text-sm font-semibold text-slate-800">위치</div>
-                  <span className="text-sm text-slate-600">서울특별시 강남구 테헤란로</span>
+                  <div className="text-sm font-semibold text-stone-800">위치</div>
+                  <span className="text-sm text-stone-600">서울특별시 강남구 테헤란로</span>
                 </div>
               </div>
             </div>
@@ -113,28 +110,44 @@ export default function Contact() {
                 { label: '무료 상담', value: '30분 제공' },
                 { label: '비밀 보장', value: 'NDA 가능' },
               ].map((b) => (
-                <div key={b.label} className="text-center bg-white rounded-xl p-4 border border-slate-100 shadow-sm">
-                  <div className="text-base font-bold text-violet-600 mb-1">{b.value}</div>
-                  <div className="text-xs text-slate-500">{b.label}</div>
+                <div key={b.label} className="text-center bg-white rounded-xl p-4 border border-stone-100 shadow-sm">
+                  <div className="text-base font-bold text-amber-700 mb-1">{b.value}</div>
+                  <div className="text-xs text-stone-500">{b.label}</div>
                 </div>
               ))}
             </div>
           </div>
 
           {/* Right: Form */}
-          <div className="bg-white rounded-2xl p-8 border border-slate-100 shadow-lg">
+          <div className="bg-white rounded-2xl p-8 border border-stone-100 shadow-lg">
+            {/* KakaoTalk CTA */}
+            <a
+              href="http://pf.kakao.com/_SZxgZX"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 w-full py-4 rounded-xl text-sm font-semibold text-stone-900 mb-6 transition-opacity hover:opacity-90"
+              style={{ background: '#FEE500' }}
+            >
+              <MessageCircle size={18} aria-hidden="true" />
+              카카오톡으로 바로 문의하기
+            </a>
+            <div className="flex items-center gap-3 mb-6">
+              <div className="flex-1 h-px bg-stone-100" />
+              <span className="text-xs text-stone-400 shrink-0">또는 폼으로 신청</span>
+              <div className="flex-1 h-px bg-stone-100" />
+            </div>
             {status === 'success' ? (
               <div className="text-center py-10">
                 <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-5">
                   <CheckCircle size={32} className="text-emerald-600" aria-hidden="true" />
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-2">상담 신청 완료!</h3>
-                <p className="text-slate-500 mb-6">
+                <h3 className="text-xl font-bold text-stone-900 mb-2">상담 신청 완료!</h3>
+                <p className="text-stone-500 mb-6">
                   빠른 시일 내로 연락드리겠습니다.<br />
                   보통 영업일 기준 24시간 이내에 답변드립니다.
                 </p>
                 <button
-                  className="btn-secondary px-6 py-3 rounded-xl text-sm font-semibold text-blue-600 border border-blue-200 hover:bg-blue-50 cursor-pointer"
+                  className="btn-secondary px-6 py-3 rounded-xl text-sm font-semibold text-amber-700 border border-amber-200 hover:bg-amber-50 cursor-pointer"
                   onClick={() => setStatus(null)}
                 >
                   다시 문의하기
@@ -142,12 +155,12 @@ export default function Contact() {
               </div>
             ) : (
               <form onSubmit={handleSubmit} noValidate aria-label="상담 신청 폼">
-                <h3 className="text-xl font-bold text-slate-900 mb-6">무료 상담 신청</h3>
+                <h3 className="text-xl font-bold text-stone-900 mb-6">무료 상담 신청</h3>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
                   {/* Name */}
                   <div>
-                    <label htmlFor="field-name" className="block text-sm font-medium text-slate-700 mb-1.5">
+                    <label htmlFor="field-name" className="block text-sm font-medium text-stone-700 mb-1.5">
                       이름 <span className="text-red-500" aria-label="필수">*</span>
                     </label>
                     <input
@@ -160,8 +173,8 @@ export default function Contact() {
                       aria-required="true"
                       aria-invalid={!!errors.name}
                       aria-describedby={errors.name ? 'error-name' : undefined}
-                      className={`w-full px-4 py-3 rounded-xl border text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-violet-400 transition-colors ${
-                        errors.name ? 'border-red-400 bg-red-50' : 'border-slate-200 bg-slate-50 hover:border-slate-300'
+                      className={`w-full px-4 py-3 rounded-xl border text-sm text-stone-900 placeholder:text-stone-400 focus:outline-none focus:ring-2 focus:ring-amber-400 transition-colors ${
+                        errors.name ? 'border-red-400 bg-red-50' : 'border-stone-200 bg-stone-50 hover:border-stone-300'
                       }`}
                       placeholder="홍길동"
                     />
@@ -175,7 +188,7 @@ export default function Contact() {
 
                   {/* Company */}
                   <div>
-                    <label htmlFor="field-company" className="block text-sm font-medium text-slate-700 mb-1.5">
+                    <label htmlFor="field-company" className="block text-sm font-medium text-stone-700 mb-1.5">
                       회사명
                     </label>
                     <input
@@ -185,7 +198,7 @@ export default function Contact() {
                       autoComplete="organization"
                       value={form.company}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-violet-400 hover:border-slate-300 transition-colors"
+                      className="w-full px-4 py-3 rounded-xl border border-stone-200 bg-stone-50 text-sm text-stone-900 placeholder:text-stone-400 focus:outline-none focus:ring-2 focus:ring-amber-400 hover:border-stone-300 transition-colors"
                       placeholder="(주)회사명"
                     />
                   </div>
@@ -193,7 +206,7 @@ export default function Contact() {
 
                 {/* Email */}
                 <div className="mb-4">
-                  <label htmlFor="field-email" className="block text-sm font-medium text-slate-700 mb-1.5">
+                  <label htmlFor="field-email" className="block text-sm font-medium text-stone-700 mb-1.5">
                     이메일 <span className="text-red-500" aria-label="필수">*</span>
                   </label>
                   <input
@@ -206,8 +219,8 @@ export default function Contact() {
                     aria-required="true"
                     aria-invalid={!!errors.email}
                     aria-describedby={errors.email ? 'error-email' : undefined}
-                    className={`w-full px-4 py-3 rounded-xl border text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-violet-400 transition-colors ${
-                      errors.email ? 'border-red-400 bg-red-50' : 'border-slate-200 bg-slate-50 hover:border-slate-300'
+                    className={`w-full px-4 py-3 rounded-xl border text-sm text-stone-900 placeholder:text-stone-400 focus:outline-none focus:ring-2 focus:ring-amber-400 transition-colors ${
+                      errors.email ? 'border-red-400 bg-red-50' : 'border-stone-200 bg-stone-50 hover:border-stone-300'
                     }`}
                     placeholder="example@company.com"
                   />
@@ -221,7 +234,7 @@ export default function Contact() {
 
                 {/* Service */}
                 <div className="mb-4">
-                  <label htmlFor="field-service" className="block text-sm font-medium text-slate-700 mb-1.5">
+                  <label htmlFor="field-service" className="block text-sm font-medium text-stone-700 mb-1.5">
                     문의 서비스 <span className="text-red-500" aria-label="필수">*</span>
                   </label>
                   <select
@@ -232,8 +245,8 @@ export default function Contact() {
                     aria-required="true"
                     aria-invalid={!!errors.service}
                     aria-describedby={errors.service ? 'error-service' : undefined}
-                    className={`w-full px-4 py-3 rounded-xl border text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-violet-400 transition-colors cursor-pointer ${
-                      errors.service ? 'border-red-400 bg-red-50' : 'border-slate-200 bg-slate-50 hover:border-slate-300'
+                    className={`w-full px-4 py-3 rounded-xl border text-sm text-stone-900 focus:outline-none focus:ring-2 focus:ring-amber-400 transition-colors cursor-pointer ${
+                      errors.service ? 'border-red-400 bg-red-50' : 'border-stone-200 bg-stone-50 hover:border-stone-300'
                     }`}
                   >
                     <option value="">서비스를 선택해주세요</option>
@@ -251,7 +264,7 @@ export default function Contact() {
 
                 {/* Message */}
                 <div className="mb-6">
-                  <label htmlFor="field-message" className="block text-sm font-medium text-slate-700 mb-1.5">
+                  <label htmlFor="field-message" className="block text-sm font-medium text-stone-700 mb-1.5">
                     문의 내용 <span className="text-red-500" aria-label="필수">*</span>
                   </label>
                   <textarea
@@ -263,12 +276,12 @@ export default function Contact() {
                     aria-required="true"
                     aria-invalid={!!errors.message}
                     aria-describedby={errors.message ? 'error-message' : 'helper-message'}
-                    className={`w-full px-4 py-3 rounded-xl border text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-violet-400 transition-colors resize-none ${
-                      errors.message ? 'border-red-400 bg-red-50' : 'border-slate-200 bg-slate-50 hover:border-slate-300'
+                    className={`w-full px-4 py-3 rounded-xl border text-sm text-stone-900 placeholder:text-stone-400 focus:outline-none focus:ring-2 focus:ring-amber-400 transition-colors resize-none ${
+                      errors.message ? 'border-red-400 bg-red-50' : 'border-stone-200 bg-stone-50 hover:border-stone-300'
                     }`}
                     placeholder="현재 어떤 업무를 자동화하고 싶으신지, 현재 상황 등을 자유롭게 작성해주세요."
                   />
-                  <p id="helper-message" className="mt-1 text-xs text-slate-400">
+                  <p id="helper-message" className="mt-1 text-xs text-stone-400">
                     자세할수록 더 정확한 답변이 가능합니다.
                   </p>
                   {errors.message && (
