@@ -4,7 +4,6 @@ import { Menu, X, Zap } from 'lucide-react'
 const navLinks = [
   { label: '서비스', href: '#services' },
   { label: '프로세스', href: '#process' },
-  { label: '기술 스택', href: '#tech' },
   { label: '고객 후기', href: '#testimonials' },
   { label: '요금제', href: '#pricing' },
 ]

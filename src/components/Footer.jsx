@@ -10,7 +10,6 @@ const footerLinks = {
   ],
   회사: [
     { label: '프로세스', href: '#process' },
-    { label: '기술 스택', href: '#tech' },
     { label: '고객 후기', href: '#testimonials' },
     { label: '요금제', href: '#pricing' },
     { label: '문의하기', href: '#contact' },

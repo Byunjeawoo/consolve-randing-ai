@@ -70,13 +70,13 @@ export default function Pricing() {
         </div>
 
         {/* Plans */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 max-w-5xl mx-auto items-start">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 max-w-5xl mx-auto items-stretch">
           {plans.map((plan) => (
             <article
               key={plan.name}
               className={`relative rounded-2xl p-5 md:p-7 flex flex-col transition-transform duration-200 hover:-translate-y-1 ${
                 plan.highlight
-                  ? 'bg-white border-2 border-amber-500 shadow-2xl shadow-amber-200/60 md:scale-105'
+                  ? 'bg-white border-2 border-amber-500 shadow-2xl shadow-amber-200/60'
                   : 'bg-stone-50 border border-stone-200 text-stone-900'
               }`}
             >

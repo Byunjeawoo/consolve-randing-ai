@@ -133,14 +133,7 @@ export default function Hero() {
 
               {/* Floating badges */}
               <div
-                className="absolute -right-6 top-8 glass-card rounded-xl px-4 py-3 shadow-xl border border-amber-200/40"
-                aria-hidden="true"
-              >
-                <div className="text-2xl font-bold text-amber-700">1,600만+</div>
-                <div className="text-xs text-stone-500 font-medium">개발 외주 누적 매출</div>
-              </div>
-              <div
-                className="absolute -left-6 bottom-12 glass-card rounded-xl px-4 py-3 shadow-xl border border-orange-200/40"
+                className="absolute -right-6 top-8 glass-card rounded-xl px-4 py-3 shadow-xl border border-orange-200/40"
                 aria-hidden="true"
               >
                 <div className="text-2xl font-bold text-orange-500">49,000원~</div>
