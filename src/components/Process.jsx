@@ -90,12 +90,7 @@ export default function Process() {
                   </div>
 
                   <h3 className="text-lg font-bold text-stone-900 mb-2">{step.title}</h3>
-                  <p className="text-sm text-stone-600 leading-relaxed mb-4">{step.desc}</p>
-
-                  <div className="flex items-center gap-1.5 text-xs font-semibold text-stone-500 mt-auto">
-                    <span className="w-1.5 h-1.5 rounded-full bg-stone-400" aria-hidden="true" />
-                    {step.duration}
-                  </div>
+                  <p className="text-sm text-stone-600 leading-relaxed">{step.desc}</p>
                 </div>
 
                 {/* Arrow (between cards, not after last) */}

@@ -1,10 +1,8 @@
 import { useState } from 'react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
-import Stats from './components/Stats'
 import Services from './components/Services'
 import Process from './components/Process'
-import TechStack from './components/TechStack'
 import Testimonials from './components/Testimonials'
 import Pricing from './components/Pricing'
 import FAQ from './components/FAQ'
@@ -27,10 +25,8 @@ export default function App() {
       <Navbar />
       <main id="main-content">
         <Hero />
-        <Stats />
         <Services />
         <Process />
-        <TechStack />
         <Testimonials />
         <Pricing />
         <FAQ />
