@@ -21,10 +21,10 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-[background-color,backdrop-filter,box-shadow,border-color] duration-300 border-b ${
         scrolled
-          ? 'glass-card shadow-lg shadow-stone-200/50'
-          : 'bg-transparent'
+          ? 'bg-amber-50/90 backdrop-blur-md shadow-lg shadow-stone-200/50 border-stone-200/60'
+          : 'bg-transparent border-transparent'
       }`}
       aria-label="주 내비게이션"
     >

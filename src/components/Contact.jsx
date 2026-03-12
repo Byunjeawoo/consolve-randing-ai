@@ -46,9 +46,21 @@ export default function Contact() {
       return
     }
     setStatus('loading')
-    await new Promise((res) => setTimeout(res, 1500))
-    setStatus('success')
-    setForm(initialState)
+    try {
+      const res = await fetch('https://formspree.io/f/mvzwajpb', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(form),
+      })
+      if (res.ok) {
+        setStatus('success')
+        setForm(initialState)
+      } else {
+        setStatus('error')
+      }
+    } catch {
+      setStatus('error')
+    }
   }
 
   return (
@@ -136,6 +148,12 @@ export default function Contact() {
               <span className="text-xs text-stone-400 shrink-0">또는 폼으로 신청</span>
               <div className="flex-1 h-px bg-stone-100" />
             </div>
+            {status === 'error' && (
+              <div className="mb-4 p-4 rounded-xl bg-red-50 border border-red-200 text-sm text-red-600 flex items-center gap-2">
+                <AlertCircle size={16} aria-hidden="true" />
+                전송 중 오류가 발생했습니다. 다시 시도해주세요.
+              </div>
+            )}
             {status === 'success' ? (
               <div className="text-center py-10">
                 <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-5">

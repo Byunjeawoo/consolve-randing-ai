@@ -18,19 +18,19 @@ const codeLines = [
 export default function Hero() {
   return (
     <section
-      className="relative h-screen flex items-center overflow-hidden bg-gradient-to-br from-stone-950 via-amber-950 to-stone-900"
+      className="relative h-screen flex items-center overflow-hidden bg-gradient-to-br from-amber-50 via-orange-50 to-stone-100"
       aria-labelledby="hero-heading"
     >
       {/* Background decoration */}
       <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-amber-500/20 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-rose-500/10 rounded-full blur-3xl" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-amber-400/6 rounded-full blur-3xl" />
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-amber-300/40 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-orange-300/30 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-amber-200/30 rounded-full blur-3xl" />
         {/* Grid pattern */}
         <div
-          className="absolute inset-0 opacity-[0.03]"
+          className="absolute inset-0 opacity-[0.06]"
           style={{
-            backgroundImage: `linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)`,
+            backgroundImage: `linear-gradient(rgba(194,119,58,0.8) 1px, transparent 1px), linear-gradient(90deg, rgba(194,119,58,0.8) 1px, transparent 1px)`,
             backgroundSize: '60px 60px',
           }}
         />
@@ -42,25 +42,22 @@ export default function Hero() {
           <div className="animate-fade-up">
             <h1
               id="hero-heading"
-              className="text-3xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4 sm:mb-6"
+              className="text-3xl sm:text-5xl lg:text-6xl font-bold text-stone-900 leading-tight mb-4 sm:mb-6"
             >
               매일 2~3시간씩 <span className="gradient-text">반복하는 그 업무,</span> 하루만에 해결하세요.
             </h1>
 
-            <p className="text-base sm:text-lg text-stone-300 leading-relaxed mb-6 sm:mb-8 max-w-lg">
+            <p className="text-base sm:text-lg text-stone-600 leading-relaxed mb-6 sm:mb-8 max-w-lg">
               중소기업 경리인 어머니의 업무를 3시간 만에 자동화해드렸습니다.
               <br />
-              설명하기도 귀찮은 그 업무, <strong className="text-white">맞춤 프로그램 하나로 간단히 해결됩니다.</strong>
+              설명하기도 귀찮은 그 업무, <strong className="text-stone-900">맞춤 프로그램 하나로 간단히 해결됩니다.</strong>
             </p>
 
             {/* Highlights */}
             <div className="flex flex-wrap gap-3 mb-6 sm:mb-8">
               {highlights.map((item) => (
-                <span
-                  key={item}
-                  className="flex items-center gap-1.5 text-sm text-stone-300"
-                >
-                  <CheckCircle size={15} className="text-amber-400 flex-shrink-0" aria-hidden="true" />
+                <span key={item} className="flex items-center gap-1.5 text-sm text-stone-600">
+                  <CheckCircle size={15} className="text-amber-600 flex-shrink-0" aria-hidden="true" />
                   {item}
                 </span>
               ))}
@@ -70,7 +67,7 @@ export default function Hero() {
             <div className="flex flex-wrap gap-4">
               <a
                 href="#contact"
-                className="btn-primary inline-flex items-center gap-2 px-7 py-4 rounded-2xl text-base font-semibold text-white shadow-xl shadow-orange-500/20 cursor-pointer"
+                className="btn-primary inline-flex items-center gap-2 px-7 py-4 rounded-2xl text-base font-semibold text-white shadow-xl shadow-orange-500/30 cursor-pointer"
                 style={{ background: 'linear-gradient(135deg, #F97316, #EA6C0A)' }}
               >
                 업무 자동화 시작하기
@@ -78,15 +75,16 @@ export default function Hero() {
               </a>
               <a
                 href="#services"
-                className="btn-secondary inline-flex items-center gap-2 px-7 py-4 rounded-2xl text-base font-semibold text-white border border-white/20 hover:bg-white/10 cursor-pointer"
+                className="btn-secondary inline-flex items-center gap-2 px-7 py-4 rounded-2xl text-base font-semibold text-stone-700 border border-stone-300 hover:bg-stone-100 cursor-pointer"
               >
                 <ChevronDown size={16} aria-hidden="true" />
                 서비스 알아보기
               </a>
             </div>
+
             {/* Trust badge */}
-            <div className="flex items-center gap-2 mt-5 text-stone-400 text-sm">
-              <ShieldCheck size={16} className="text-amber-400 shrink-0" aria-hidden="true" />
+            <div className="flex items-center gap-2 mt-5 text-stone-500 text-sm">
+              <ShieldCheck size={16} className="text-amber-600 shrink-0" aria-hidden="true" />
               불만족시 결제 없이 종료
             </div>
           </div>
@@ -95,7 +93,7 @@ export default function Hero() {
           <div className="hidden lg:block animate-fade-up" style={{ animationDelay: '0.2s' }}>
             <div className="relative">
               {/* Browser chrome */}
-              <div className="rounded-2xl overflow-hidden shadow-2xl shadow-amber-900/40 border border-white/10">
+              <div className="rounded-2xl overflow-hidden shadow-2xl shadow-stone-400/30 border border-stone-200">
                 {/* Title bar */}
                 <div className="bg-stone-800/90 px-4 py-3 flex items-center gap-2">
                   <div className="flex gap-1.5" aria-hidden="true">
@@ -117,10 +115,7 @@ export default function Hero() {
                         <span className="text-stone-600 select-none w-7 text-right mr-4 shrink-0">
                           {i + 1}
                         </span>
-                        <span
-                          className={line.color}
-                          style={{ paddingLeft: `${line.indent * 16}px` }}
-                        >
+                        <span className={line.color} style={{ paddingLeft: `${line.indent * 16}px` }}>
                           {line.content}
                         </span>
                       </div>
@@ -155,7 +150,6 @@ export default function Hero() {
           </div>
         </div>
       </div>
-
     </section>
   )
 }
