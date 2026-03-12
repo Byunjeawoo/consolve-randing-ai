@@ -1,4 +1,4 @@
-import { ArrowRight, Play, CheckCircle, ShieldCheck } from 'lucide-react'
+import { ArrowRight, ChevronDown, CheckCircle, ShieldCheck } from 'lucide-react'
 
 const highlights = ['엑셀 보고서 자동화', '반복 메일 발송', '데이터 자동 수집', '문서 자동 생성']
 
@@ -18,7 +18,7 @@ const codeLines = [
 export default function Hero() {
   return (
     <section
-      className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-stone-950 via-amber-950 to-stone-900"
+      className="relative h-screen flex items-center overflow-hidden bg-gradient-to-br from-stone-950 via-amber-950 to-stone-900"
       aria-labelledby="hero-heading"
     >
       {/* Background decoration */}
@@ -36,33 +36,25 @@ export default function Hero() {
         />
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 w-full">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-12 w-full">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left: Text */}
           <div className="animate-fade-up">
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/15 border border-amber-400/30 text-amber-300 text-sm font-medium mb-6">
-              <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse-dot" aria-hidden="true" />
-              하루 식비로 반복 업무 자동화
-            </div>
-
             <h1
               id="hero-heading"
-              className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6"
+              className="text-3xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4 sm:mb-6"
             >
               매일 2~3시간씩 <span className="gradient-text">반복하는 그 업무,</span> 하루만에 해결하세요.
             </h1>
 
-            <p className="text-lg text-stone-300 leading-relaxed mb-8 max-w-lg">
-              중소기업 경리인 저희 어머니의 반복 업무를 자동화해드렸습니다.
+            <p className="text-base sm:text-lg text-stone-300 leading-relaxed mb-6 sm:mb-8 max-w-lg">
+              중소기업 경리인 어머니의 업무를 3시간 만에 자동화해드렸습니다.
               <br />
-              설명하기 귀찮은 그 업무, <strong className="text-white">맞춤 프로그램 하나로 간단히 해결됩니다.</strong>
-              <br />
-              개발 외주 누적 매출 <strong className="text-white">1,600만원+</strong>의 검증된 개발력.
+              설명하기도 귀찮은 그 업무, <strong className="text-white">맞춤 프로그램 하나로 간단히 해결됩니다.</strong>
             </p>
 
             {/* Highlights */}
-            <div className="flex flex-wrap gap-3 mb-10">
+            <div className="flex flex-wrap gap-3 mb-6 sm:mb-8">
               {highlights.map((item) => (
                 <span
                   key={item}
@@ -88,14 +80,14 @@ export default function Hero() {
                 href="#services"
                 className="btn-secondary inline-flex items-center gap-2 px-7 py-4 rounded-2xl text-base font-semibold text-white border border-white/20 hover:bg-white/10 cursor-pointer"
               >
-                <Play size={16} aria-hidden="true" />
+                <ChevronDown size={16} aria-hidden="true" />
                 서비스 알아보기
               </a>
             </div>
             {/* Trust badge */}
             <div className="flex items-center gap-2 mt-5 text-stone-400 text-sm">
               <ShieldCheck size={16} className="text-amber-400 shrink-0" aria-hidden="true" />
-              결과물 먼저 확인 → 마음에 드시면 결제 · 선결제 없음
+              불만족시 결제 없이 종료
             </div>
           </div>
 
@@ -164,12 +156,6 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Bottom wave */}
-      <div className="absolute bottom-0 left-0 right-0" aria-hidden="true">
-        <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-          <path d="M0 60L1440 60L1440 20C1200 55 900 65 720 45C540 25 240 5 0 30L0 60Z" fill="#FFFBF5" />
-        </svg>
-      </div>
     </section>
   )
 }

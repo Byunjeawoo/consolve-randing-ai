@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from 'react'
 
 const stats = [
-  { value: 1600, suffix: '만+', label: '앱·웹 개발 매출', desc: '검증된 개발 실력' },
-  { value: 3, suffix: '년+', label: '개발 경력', desc: '앱·웹 외주 전문' },
-  { value: 24, suffix: '시간', label: '평균 응답 시간', desc: '빠른 커뮤니케이션' },
+  { value: 1600, suffix: '만+', label: '개발 외주 매출', desc: '검증된 개발 실력' },
+  { value: 3, suffix: '년+', label: '개발 경력', desc: '개발 경험 다수' },
+  { value: 1, suffix: '일 내', label: '평균 응답 시간', desc: '당일 회신 원칙' },
   { value: 49, suffix: ',000원~', label: '자동화 시작가', desc: '하루 식비로 시작' },
 ]
 

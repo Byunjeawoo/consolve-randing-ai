@@ -98,7 +98,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <div className="text-sm font-semibold text-stone-800">위치</div>
-                  <span className="text-sm text-stone-600">서울특별시 강남구 테헤란로</span>
+                  <span className="text-sm text-stone-600">인천광역시 연수구 워터프론트로</span>
                 </div>
               </div>
             </div>
@@ -122,7 +122,7 @@ export default function Contact() {
           <div className="bg-white rounded-2xl p-8 border border-stone-100 shadow-lg">
             {/* KakaoTalk CTA */}
             <a
-              href="http://pf.kakao.com/_SZxgZX"
+              href="http://pf.kakao.com/_SZxgZX/chat"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 w-full py-4 rounded-xl text-sm font-semibold text-stone-900 mb-6 transition-opacity hover:opacity-90"

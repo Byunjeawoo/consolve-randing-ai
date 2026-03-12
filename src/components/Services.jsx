@@ -72,7 +72,7 @@ export default function Services() {
             <h3 className="text-base font-bold text-stone-800 mb-1.5">대량 메일 & 알림 자동 발송</h3>
             <p className="text-sm text-stone-600 mb-3">수십·수백 명에게 개인화된 메일을 자동으로 발송합니다.</p>
             <div className="flex flex-wrap gap-1.5">
-              {['Gmail', 'Outlook', '카카오'].map((tag) => (
+              {['Gmail', 'Discord', '카카오'].map((tag) => (
                 <span key={tag} className="text-xs font-medium px-2 py-1 rounded-full bg-white/70 text-stone-600 border border-stone-200/60">{tag}</span>
               ))}
             </div>

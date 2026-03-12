@@ -3,17 +3,17 @@ import { Cpu } from 'lucide-react'
 const techCategories = [
   {
     category: 'RPA & 자동화',
-    techs: ['Python', 'Selenium', 'Playwright', 'PyAutoGUI', 'UiPath', 'AutoHotkey'],
+    techs: ['Python', 'Selenium', 'Playwright', 'PyAutoGUI', 'pywinauto'],
     color: 'bg-blue-500',
   },
   {
-    category: 'AI & 데이터',
-    techs: ['OpenAI GPT', 'Claude API', 'LangChain', 'Pandas', 'NumPy', 'Scikit-learn'],
+    category: '데이터',
+    techs: ['Pandas', 'NumPy', 'openpyxl', 'SQLAlchemy', 'xlwings'],
     color: 'bg-violet-500',
   },
   {
     category: '웹 & API',
-    techs: ['FastAPI', 'Node.js', 'REST API', 'GraphQL', 'Webhook', 'OAuth'],
+    techs: ['FastAPI', 'Django', 'React', 'REST API', 'Webhook', 'OAuth'],
     color: 'bg-cyan-500',
   },
   {
@@ -23,7 +23,7 @@ const techCategories = [
   },
   {
     category: '인프라 & 배포',
-    techs: ['AWS Lambda', 'Docker', 'GitHub Actions', 'Cron Jobs', 'Linux Server', 'PM2'],
+    techs: ['AWS', 'GCP', 'Docker', 'GitHub Actions', 'Task Scheduler', 'Linux Server'],
     color: 'bg-orange-500',
   },
 ]

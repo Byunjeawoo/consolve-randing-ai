@@ -16,11 +16,11 @@ const faqs = [
   },
   {
     q: '개발 기간은 얼마나 걸리나요?',
-    a: '단순 자동화는 1일, 복합 자동화는 1주 내외입니다.',
+    a: '단순 자동화는 1일, 복합 자동화는 1주 내외입니다. 다만 요청하신 기능의 범위와 복잡도에 따라 달라질 수 있습니다.',
   },
   {
     q: '지금 가격이 계속 유지되나요?',
-    a: '지금은 초기 특가입니다. 수요 증가 시 단계적으로 인상될 예정이므로 지금이 가장 저렴합니다.',
+    a: '현재 가격은 개발 일정과 운영 상황에 따라 언제든 변경될 수 있습니다. 문의 시점 기준으로 안내드리고 있으니 미리 상담해두시는 걸 추천드립니다.',
   },
 ]
 
@@ -42,8 +42,8 @@ function FAQItem({ q, a }) {
         />
       </button>
       {open && (
-        <div className="px-6 pb-5 bg-white">
-          <p className="text-sm text-stone-600 leading-relaxed">{a}</p>
+        <div className="px-6 pt-3 pb-5 bg-white">
+          <p className="text-sm text-stone-600 leading-relaxed whitespace-pre-line">{a}</p>
         </div>
       )}
     </li>

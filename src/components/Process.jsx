@@ -5,7 +5,7 @@ const steps = [
     icon: MessageCircle,
     step: '01',
     title: '무료 상담',
-    desc: '현재 업무 프로세스와 자동화 목표를 파악합니다. 30분 무료 화상 상담으로 시작하세요.',
+    desc: '현재 업무 프로세스와 자동화 목표를 파악합니다. 30분 통화 상담으로 시작하세요.',
     duration: '30분',
     color: 'text-amber-700',
     bg: 'bg-amber-50',
@@ -17,7 +17,7 @@ const steps = [
     step: '02',
     title: '요구사항 분석',
     desc: '상세 분석을 통해 최적의 자동화 방법론과 예상 비용·일정을 제안드립니다.',
-    duration: '3–5일',
+    duration: '1시간',
     color: 'text-rose-600',
     bg: 'bg-rose-50',
     border: 'border-rose-200',
@@ -26,8 +26,8 @@ const steps = [
   {
     icon: Code2,
     step: '03',
-    title: '개발 & 테스트',
-    desc: '애자일 방식으로 개발하며 주기적으로 진행 상황을 공유합니다. 단계별 테스트로 품질을 보장합니다.',
+    title: '개발',
+    desc: '진행 상황을 주기적으로 공유하며, 원하는 방향으로 함께 조율해드립니다.',
     duration: '1일~1주 내외',
     color: 'text-orange-600',
     bg: 'bg-orange-50',
@@ -38,7 +38,7 @@ const steps = [
     icon: Rocket,
     step: '04',
     title: '납품 & 유지보수',
-    desc: '완성된 솔루션을 인도하고 담당자 교육을 진행합니다. 3일 무료 유지보수를 제공합니다.',
+    desc: '완성된 솔루션을 인도하고 담당자 교육을 진행합니다. 3일 무료 유지보수를 제공해드립니다.',
     duration: '지속적 지원',
     color: 'text-emerald-600',
     bg: 'bg-emerald-50',
@@ -77,7 +77,7 @@ export default function Process() {
             return (
               <div key={step.step} className="relative z-10">
                 <div
-                  className={`rounded-2xl p-6 border ${step.border} ${step.bg} h-full`}
+                  className={`rounded-2xl p-6 border ${step.border} ${step.bg} h-full flex flex-col`}
                 >
                   {/* Step number + icon */}
                   <div className="flex items-center justify-between mb-5">
@@ -92,7 +92,7 @@ export default function Process() {
                   <h3 className="text-lg font-bold text-stone-900 mb-2">{step.title}</h3>
                   <p className="text-sm text-stone-600 leading-relaxed mb-4">{step.desc}</p>
 
-                  <div className="flex items-center gap-1.5 text-xs font-semibold text-stone-500">
+                  <div className="flex items-center gap-1.5 text-xs font-semibold text-stone-500 mt-auto">
                     <span className="w-1.5 h-1.5 rounded-full bg-stone-400" aria-hidden="true" />
                     {step.duration}
                   </div>

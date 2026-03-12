@@ -1,4 +1,4 @@
-import { Heart, ArrowRight, Quote } from 'lucide-react'
+import { ArrowRight, Quote } from 'lucide-react'
 
 const testimonials = [
   {
@@ -8,6 +8,10 @@ const testimonials = [
   {
     quote: '생각만 하던 기획안을 실제로 실현해볼 수 있도록 해주셨어요! 비용이 저렴하다 보니 처음에는 큰 기대를 안 한 것도 사실인데, 시작하고 나니 제가 잘못 생각했더라구요. 실력도 좋으시고 궁금한 부분도 답변 잘 해주셔서 너무 좋았습니다!',
     author: '스타트업 대표',
+  },
+  {
+    quote: '비용이 타 업체에 비해 비교가 안될 정도로 정말 저렴합니다. 그렇다고 퀄리티가 낮은 게 아니라, 대표님이 꾸준히 소통하면서 개발적 시야에서 피드백 주셨어요. 덕분에 저도 많이 배웠습니다!',
+    author: 'e커머스 대표 (월매출 1억+)',
   },
 ]
 
@@ -19,12 +23,11 @@ export default function Testimonials() {
           {/* Left: Story */}
           <div>
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-100 text-orange-700 text-sm font-medium mb-6">
-              <Heart size={14} className="fill-orange-500 text-orange-500" aria-hidden="true" />
-              시작된 이유
+              시작한 이유
             </div>
             <h2 id="story-heading" className="text-3xl sm:text-4xl font-bold text-stone-900 mb-6">
-              "엄마, 이제 그 일은<br />
-              <span className="text-amber-700">프로그램한테 맡겨."</span>
+              직장인 어머니의<br />
+              <span className="text-amber-700">야근이 사라지던 날</span>
             </h2>
             <div className="space-y-4 text-stone-600 leading-relaxed">
               <p>
@@ -50,14 +53,18 @@ export default function Testimonials() {
 
           {/* Right: Testimonials */}
           <div>
-            <p className="text-sm font-semibold text-stone-500 uppercase tracking-wide mb-5">고객 후기</p>
+            <p className="text-base font-bold text-stone-800 mb-5">어머니만의 이야기가 아니었습니다.</p>
             <ul className="space-y-4">
               {testimonials.map((t) => (
                 <li
                   key={t.author}
                   className="bg-white rounded-2xl px-6 py-5 border border-stone-100 shadow-sm"
                 >
-                  <Quote size={20} className="text-amber-300 mb-3" aria-hidden="true" />
+                  <div className="flex gap-0.5 mb-3" aria-label="별점 5점">
+                    {[...Array(5)].map((_, i) => (
+                      <span key={i} className="text-amber-400 text-base" aria-hidden="true">★</span>
+                    ))}
+                  </div>
                   <p className="text-stone-700 text-sm leading-relaxed mb-4">{t.quote}</p>
                   <div className="flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-amber-400 shrink-0" aria-hidden="true" />

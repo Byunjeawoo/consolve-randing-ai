@@ -1,4 +1,4 @@
-import { Zap, Mail } from 'lucide-react'
+import { Mail, MessageCircle } from 'lucide-react'
 
 const footerLinks = {
   서비스: [
@@ -17,7 +17,7 @@ const footerLinks = {
   ],
 }
 
-export default function Footer() {
+export default function Footer({ onPrivacyOpen }) {
   const year = new Date().getFullYear()
 
   return (
@@ -27,10 +27,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="md:col-span-2">
             <a href="#" className="inline-flex items-center gap-2 mb-4 group focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 rounded-lg">
-              <div className="w-8 h-8 rounded-lg gradient-bg flex items-center justify-center shadow-md">
-                <Zap size={16} className="text-white" aria-hidden="true" />
-              </div>
-              <span className="font-bold text-xl text-white">Consolve</span>
+<span className="font-bold text-xl text-white">Consolve</span>
             </a>
             <p className="text-sm leading-relaxed text-stone-400 max-w-xs mb-6">
               자동화 프로그램 전문 개발 외주 파트너.
@@ -43,6 +40,15 @@ export default function Footer() {
                 className="w-9 h-9 rounded-lg bg-stone-900 border border-stone-800 flex items-center justify-center text-stone-400 hover:text-white hover:bg-stone-800 transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500"
               >
                 <Mail size={16} aria-hidden="true" />
+              </a>
+              <a
+                href="http://pf.kakao.com/_SZxgZX/chat"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="카카오톡 채팅"
+                className="w-9 h-9 rounded-lg bg-stone-900 border border-stone-800 flex items-center justify-center text-stone-400 hover:text-yellow-400 hover:bg-stone-800 transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500"
+              >
+                <MessageCircle size={16} aria-hidden="true" />
               </a>
             </div>
           </div>
@@ -71,8 +77,7 @@ export default function Footer() {
         <div className="border-t border-stone-900 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-600">
           <p>© {year} Consolve. All rights reserved.</p>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-stone-400 transition-colors">개인정보처리방침</a>
-            <a href="#" className="hover:text-stone-400 transition-colors">이용약관</a>
+            <button onClick={onPrivacyOpen} className="hover:text-stone-400 transition-colors cursor-pointer">개인정보처리방침</button>
           </div>
         </div>
       </div>

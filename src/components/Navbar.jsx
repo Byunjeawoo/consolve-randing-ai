@@ -33,13 +33,10 @@ export default function Navbar() {
           {/* Logo */}
           <a
             href="#"
-            className="flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 rounded-lg"
+            className={`flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 rounded-lg`}
             aria-label="Consolve 홈으로"
           >
-            <div className="w-8 h-8 rounded-lg gradient-bg flex items-center justify-center shadow-md">
-              <Zap size={16} className="text-white" aria-hidden="true" />
-            </div>
-            <span className="font-bold text-xl text-stone-800 tracking-tight">
+<span className={`font-bold text-xl tracking-tight ${scrolled ? 'text-stone-800' : 'text-white'}`}>
               Consolve
             </span>
           </a>
@@ -50,7 +47,7 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-stone-600 hover:text-amber-700 transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 rounded px-1"
+                className={`text-sm font-medium transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 rounded px-1 ${scrolled ? 'text-stone-600 hover:text-amber-700' : 'text-white/80 hover:text-white'}`}
               >
                 {link.label}
               </a>
@@ -65,7 +62,7 @@ export default function Navbar() {
 
           {/* Mobile menu button */}
           <button
-            className="md:hidden p-2 rounded-lg text-stone-600 hover:bg-stone-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 transition-colors duration-150"
+            className={`md:hidden p-2 rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 transition-colors duration-150 ${scrolled ? 'text-stone-600 hover:bg-stone-100' : 'text-white hover:bg-white/10'}`}
             onClick={() => setIsOpen(!isOpen)}
             aria-expanded={isOpen}
             aria-controls="mobile-menu"

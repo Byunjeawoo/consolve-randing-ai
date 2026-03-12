@@ -37,7 +37,7 @@ const plans = [
   {
     name: 'Advanced',
     tagline: '복잡하고 까다로운 업무',
-    price: '190,000',
+    price: '490,000',
     priceUnit: '원~',
     desc: '고급 자동화 (웹 연동·크롤링 포함)',
     features: [
@@ -144,16 +144,16 @@ export default function Pricing() {
           <div className="flex items-center gap-3 mb-6">
             <ShieldCheck size={28} className="text-amber-600 shrink-0" aria-hidden="true" />
             <div>
-              <h3 className="text-lg font-bold text-stone-900">마음에 안 드시면, 제 시간만 날립니다.</h3>
-              <p className="text-sm text-stone-500">결과만 보시면 됩니다. 리스크는 전부 제가 집니다.</p>
+              <h3 className="text-lg font-bold text-stone-900">결과물 확인 후 마음에 드시면 그때 결제하세요</h3>
+              <p className="text-sm text-stone-500">마음에 안 드시면 언제든 비용 없이 종료하실 수 있습니다.</p>
             </div>
           </div>
           <ol className="grid grid-cols-2 sm:grid-cols-4 gap-4">
             {[
-              { icon: Zap, step: '1', label: '업무 접수', desc: '카카오톡으로\n내용 전달' },
-              { icon: Video, step: '2', label: '초안 개발 후\n동영상 전송', desc: '실제 작동하는\n화면을 영상으로 확인' },
-              { icon: CreditCard, step: '3', label: '만족하면 결제', desc: '마음에 안 드시면\n결제 없이 종료' },
-              { icon: Package, step: '4', label: '프로그램 납품', desc: '결제 확인 후\n즉시 전달' },
+              { icon: Zap, step: '1', label: '업무 내용 전달', desc: '카카오톡으로\n내용 전달' },
+              { icon: Video, step: '2', label: '작동 영상 확인', desc: '실제 작동하는\n화면을 영상으로 확인' },
+              { icon: CreditCard, step: '3', label: '결과물 검토 & 결제', desc: '불만족시 결제\n없이 종료' },
+              { icon: Package, step: '4', label: '프로그램 수령', desc: '결제 확인 후\n즉시 전달' },
             ].map(({ icon: Icon, step, label, desc }) => (
               <li key={step} className="flex flex-col items-center text-center gap-2">
                 <div className="w-10 h-10 rounded-full bg-amber-100 border border-amber-300 flex items-center justify-center">
