@@ -2,11 +2,12 @@ import { Mail, MessageCircle } from 'lucide-react'
 
 const footerLinks = {
   서비스: [
-    { label: 'RPA / 업무 자동화', href: '#services' },
-    { label: '웹 스크래핑', href: '#services' },
-    { label: 'API 연동', href: '#services' },
-    { label: '챗봇 개발', href: '#services' },
-    { label: '문서 자동화', href: '#services' },
+    { label: '파일 취합 & 보고서 자동화', href: '#services' },
+    { label: '메일 & 알림 자동 발송', href: '#services' },
+    { label: '웹 데이터 자동 수집', href: '#services' },
+    { label: '시스템 간 데이터 연동', href: '#services' },
+    { label: '양식 입력 & 문서 자동화', href: '#services' },
+    { label: '스케줄 기반 자동 실행', href: '#services' },
   ],
   회사: [
     { label: '프로세스', href: '#process' },

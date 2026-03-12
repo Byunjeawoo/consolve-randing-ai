@@ -76,7 +76,7 @@ export default function Navbar() {
       {isOpen && (
         <div
           id="mobile-menu"
-          className="md:hidden glass-card border-t border-stone-200/60 px-4 pb-4 pt-2"
+          className="md:hidden bg-amber-50 border-t border-stone-200/60 px-4 pb-4 pt-2"
         >
           {navLinks.map((link) => (
             <a
