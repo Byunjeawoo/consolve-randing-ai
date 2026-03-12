@@ -18,7 +18,7 @@ const codeLines = [
 export default function Hero() {
   return (
     <section
-      className="relative h-screen flex items-center overflow-hidden bg-gradient-to-br from-amber-50 via-orange-50 to-stone-100"
+      className="relative min-h-dvh flex items-center overflow-hidden bg-gradient-to-br from-amber-50 via-orange-50 to-stone-100"
       aria-labelledby="hero-heading"
     >
       {/* Background decoration */}
@@ -36,25 +36,25 @@ export default function Hero() {
         />
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-12 w-full">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 sm:pt-20 pb-12 w-full">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left: Text */}
           <div className="animate-fade-up">
             <h1
               id="hero-heading"
-              className="text-3xl sm:text-5xl lg:text-6xl font-bold text-stone-900 leading-tight mb-4 sm:mb-6"
+              className="text-4xl sm:text-5xl lg:text-6xl font-bold text-stone-900 leading-[1.15] sm:leading-tight mb-4 sm:mb-6"
             >
               매일 2~3시간씩 <span className="gradient-text">반복하는 그 업무,</span> 하루만에 해결하세요.
             </h1>
 
             <p className="text-base sm:text-lg text-stone-600 leading-relaxed mb-6 sm:mb-8 max-w-lg">
               중소기업 경리인 어머니의 업무를 3시간 만에 자동화해드렸습니다.
-              <br />
+              <span className="hidden sm:inline"><br /></span>{' '}
               설명하기도 귀찮은 그 업무, <strong className="text-stone-900">맞춤 프로그램 하나로 간단히 해결됩니다.</strong>
             </p>
 
             {/* Highlights */}
-            <div className="flex flex-wrap gap-3 mb-6 sm:mb-8">
+            <div className="grid grid-cols-2 sm:flex sm:flex-wrap gap-2 sm:gap-3 mb-6 sm:mb-8">
               {highlights.map((item) => (
                 <span key={item} className="flex items-center gap-1.5 text-sm text-stone-600">
                   <CheckCircle size={15} className="text-amber-600 flex-shrink-0" aria-hidden="true" />
@@ -64,10 +64,10 @@ export default function Hero() {
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <a
                 href="#contact"
-                className="btn-primary inline-flex items-center gap-2 px-7 py-4 rounded-2xl text-base font-semibold text-white shadow-xl shadow-orange-500/30 cursor-pointer"
+                className="btn-primary inline-flex items-center justify-center gap-2 px-7 py-4 rounded-2xl text-base font-semibold text-white shadow-xl shadow-orange-500/30 cursor-pointer"
                 style={{ background: 'linear-gradient(135deg, #F97316, #EA6C0A)' }}
               >
                 업무 자동화 시작하기
@@ -75,7 +75,7 @@ export default function Hero() {
               </a>
               <a
                 href="#services"
-                className="btn-secondary inline-flex items-center gap-2 px-7 py-4 rounded-2xl text-base font-semibold text-stone-700 border border-stone-300 hover:bg-stone-100 cursor-pointer"
+                className="btn-secondary inline-flex items-center justify-center gap-2 px-7 py-4 rounded-2xl text-base font-semibold text-stone-700 border border-stone-300 hover:bg-stone-100 cursor-pointer"
               >
                 <ChevronDown size={16} aria-hidden="true" />
                 서비스 알아보기
