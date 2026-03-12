@@ -72,34 +72,34 @@ export default function Pricing() {
         </div>
 
         {/* Plans */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 max-w-5xl mx-auto items-start">
           {plans.map((plan) => (
             <article
               key={plan.name}
-              className={`relative rounded-2xl p-7 flex flex-col transition-transform duration-200 hover:-translate-y-1 ${
+              className={`relative rounded-2xl p-5 md:p-7 flex flex-col transition-transform duration-200 hover:-translate-y-1 ${
                 plan.highlight
-                  ? 'gradient-bg text-white shadow-2xl shadow-amber-500/25 scale-105'
+                  ? 'gradient-bg text-white shadow-2xl shadow-amber-500/25 md:scale-105'
                   : 'bg-stone-50 border border-stone-200 text-stone-900'
               }`}
             >
               {plan.highlight && (
                 <div
-                  className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-orange-500 text-white text-xs font-bold shadow-lg"
+                  className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-orange-500 text-white text-xs font-bold shadow-lg whitespace-nowrap"
                   aria-label="가장 인기 있는 플랜"
                 >
                   가장 인기
                 </div>
               )}
 
-              <div className="mb-6">
+              <div className={`mb-5 ${plan.highlight ? 'mt-3 md:mt-2' : ''}`}>
                 <div className={`text-sm font-semibold mb-1 ${plan.highlight ? 'text-amber-100' : 'text-stone-500'}`}>
                   {plan.tagline}
                 </div>
-                <h3 className={`text-2xl font-bold mb-2 ${plan.highlight ? 'text-white' : 'text-stone-900'}`}>
+                <h3 className={`text-xl font-bold mb-2 ${plan.highlight ? 'text-white' : 'text-stone-900'}`}>
                   {plan.name}
                 </h3>
                 <div className="flex items-end gap-1 mb-2">
-                  <span className={`text-4xl font-bold tabular-nums ${plan.highlight ? 'text-white' : 'text-amber-700'}`}>
+                  <span className={`text-3xl md:text-4xl font-bold tabular-nums ${plan.highlight ? 'text-white' : 'text-amber-700'}`}>
                     {plan.price}
                   </span>
                   <span className={`text-base font-medium pb-1 ${plan.highlight ? 'text-amber-100' : 'text-stone-500'}`}>
@@ -140,15 +140,15 @@ export default function Pricing() {
         </div>
 
         {/* Guarantee Banner */}
-        <div className="mt-12 max-w-3xl mx-auto rounded-2xl border border-amber-200 bg-amber-50 p-8">
-          <div className="flex items-center gap-3 mb-6">
+        <div className="mt-8 md:mt-12 max-w-3xl mx-auto rounded-2xl border border-amber-200 bg-amber-50 p-6 md:p-8">
+          <div className="flex items-center gap-3 mb-5 md:mb-6">
             <ShieldCheck size={28} className="text-amber-600 shrink-0" aria-hidden="true" />
             <div>
               <h3 className="text-lg font-bold text-stone-900">결과물 확인 후 마음에 드시면 그때 결제하세요</h3>
               <p className="text-sm text-stone-500">마음에 안 드시면 언제든 비용 없이 종료하실 수 있습니다.</p>
             </div>
           </div>
-          <ol className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+          <ol className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
             {[
               { icon: Zap, step: '1', label: '업무 내용 전달', desc: '카카오톡으로\n내용 전달' },
               { icon: Video, step: '2', label: '작동 영상 확인', desc: '실제 작동하는\n화면을 영상으로 확인' },
