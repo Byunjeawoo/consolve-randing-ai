@@ -10,9 +10,8 @@ const plans = [
     features: [
       '단일 자동화 프로그램 제작',
       '엑셀·파일·메일 중 1가지',
-      '실행 파일 or 스크립트 납품',
       '사용 방법 안내 포함',
-      '카카오톡 문의 지원',
+      '3일 무료 유지보수',
     ],
     cta: '지금 시작하기',
     highlight: false,
@@ -27,9 +26,8 @@ const plans = [
       '2~3단계 연결 자동화',
       '파일 취합 + 보고서 생성 등',
       '스케줄 자동 실행 설정',
-      '완료 알림 연동',
-      '2주 무료 수정 지원',
-      '카카오톡 우선 응답',
+      '사용 방법 안내 포함',
+      '7일 무료 유지보수',
     ],
     cta: '지금 시작하기',
     highlight: true,
@@ -39,14 +37,14 @@ const plans = [
     tagline: '복잡하고 까다로운 업무',
     price: '490,000',
     priceUnit: '원~',
-    desc: '고급 자동화 (웹 연동·크롤링 포함)',
+    desc: '고급 자동화 (웹 연동 · API 연결 포함)',
     features: [
+      'Standard의 모든 기능 포함',
       '웹 데이터 수집 포함',
       '시스템 간 데이터 연동',
       '커스텀 대시보드 옵션',
-      '3일 무료 유지보수',
       '요구사항 변경 1회 무료',
-      '카카오톡 우선 응답',
+      '30일 무료 유지보수',
     ],
     cta: '상담 신청',
     highlight: false,
@@ -78,7 +76,7 @@ export default function Pricing() {
               key={plan.name}
               className={`relative rounded-2xl p-5 md:p-7 flex flex-col transition-transform duration-200 hover:-translate-y-1 ${
                 plan.highlight
-                  ? 'gradient-bg text-white shadow-2xl shadow-amber-500/25 md:scale-105'
+                  ? 'bg-white border-2 border-amber-500 shadow-2xl shadow-amber-200/60 md:scale-105'
                   : 'bg-stone-50 border border-stone-200 text-stone-900'
               }`}
             >
@@ -92,21 +90,21 @@ export default function Pricing() {
               )}
 
               <div className={`mb-5 ${plan.highlight ? 'mt-3 md:mt-2' : ''}`}>
-                <div className={`text-sm font-semibold mb-1 ${plan.highlight ? 'text-amber-100' : 'text-stone-500'}`}>
+                <div className={`text-sm font-semibold mb-1 ${plan.highlight ? 'text-amber-600' : 'text-stone-500'}`}>
                   {plan.tagline}
                 </div>
-                <h3 className={`text-xl font-bold mb-2 ${plan.highlight ? 'text-white' : 'text-stone-900'}`}>
+                <h3 className={`text-xl font-bold mb-2 ${plan.highlight ? 'text-stone-900' : 'text-stone-900'}`}>
                   {plan.name}
                 </h3>
                 <div className="flex items-end gap-1 mb-2">
-                  <span className={`text-3xl md:text-4xl font-bold tabular-nums ${plan.highlight ? 'text-white' : 'text-amber-700'}`}>
+                  <span className={`text-3xl md:text-4xl font-bold tabular-nums ${plan.highlight ? 'text-amber-700' : 'text-amber-700'}`}>
                     {plan.price}
                   </span>
-                  <span className={`text-base font-medium pb-1 ${plan.highlight ? 'text-amber-100' : 'text-stone-500'}`}>
+                  <span className={`text-base font-medium pb-1 ${plan.highlight ? 'text-stone-500' : 'text-stone-500'}`}>
                     {plan.priceUnit}
                   </span>
                 </div>
-                <p className={`text-sm ${plan.highlight ? 'text-amber-100' : 'text-stone-600'}`}>{plan.desc}</p>
+                <p className={`text-sm ${plan.highlight ? 'text-stone-600' : 'text-stone-600'}`}>{plan.desc}</p>
               </div>
 
               <ul className="space-y-3 flex-1 mb-7">
@@ -114,10 +112,10 @@ export default function Pricing() {
                   <li key={feat} className="flex items-start gap-2.5">
                     <Check
                       size={15}
-                      className={`shrink-0 mt-0.5 ${plan.highlight ? 'text-amber-100' : 'text-amber-700'}`}
+                      className={`shrink-0 mt-0.5 ${plan.highlight ? 'text-amber-600' : 'text-amber-700'}`}
                       aria-hidden="true"
                     />
-                    <span className={`text-sm ${plan.highlight ? 'text-amber-50' : 'text-stone-700'}`}>
+                    <span className={`text-sm ${plan.highlight ? 'text-stone-700' : 'text-stone-700'}`}>
                       {feat}
                     </span>
                   </li>
