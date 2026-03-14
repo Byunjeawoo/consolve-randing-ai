@@ -1,15 +1,15 @@
 import { ArrowRight, ChevronDown, CheckCircle, ShieldCheck } from 'lucide-react'
 
-const highlights = ['엑셀 보고서 자동화', '반복 메일 발송', '데이터 자동 수집', '문서 자동 생성']
+const highlights = ['견적서 자동 생성', '보고서 자동화', 'CS 자동 응답', '콘텐츠·SNS 자동화']
 
 const codeLines = [
-  { indent: 0, content: '# 매일 반복하는 그 업무', color: 'text-stone-500' },
+  { indent: 0, content: '# 문의 접수 → 견적서 자동 발송', color: 'text-stone-500' },
   { indent: 0, content: 'import consolve', color: 'text-amber-400' },
   { indent: 0, content: '', color: '' },
   { indent: 0, content: 'task = consolve.automate(', color: 'text-stone-300' },
-  { indent: 2, content: 'target="엑셀 보고서 정리",', color: 'text-green-400' },
-  { indent: 2, content: 'schedule="매일 09:00",', color: 'text-green-400' },
-  { indent: 2, content: 'notify="완료 시 카카오 알림"', color: 'text-orange-400' },
+  { indent: 2, content: 'target="견적서 자동 생성 & 발송",', color: 'text-green-400' },
+  { indent: 2, content: 'trigger="신규 문의 접수 시",', color: 'text-green-400' },
+  { indent: 2, content: 'notify="발송 완료 시 카카오 알림"', color: 'text-orange-400' },
   { indent: 0, content: ')', color: 'text-stone-300' },
   { indent: 0, content: '', color: '' },
   { indent: 0, content: 'task.run()  # 이제 자동으로 처리됩니다', color: 'text-stone-500' },
@@ -44,13 +44,13 @@ export default function Hero() {
               id="hero-heading"
               className="text-4xl sm:text-5xl lg:text-6xl font-bold text-stone-900 leading-[1.15] sm:leading-tight mb-4 sm:mb-6"
             >
-              매일 2~3시간씩 <span className="gradient-text">반복하는 그 업무,</span> 하루만에 해결하세요.
+              콘텐츠, 영업, CS... <span className="gradient-text">혼자 다 하는 시대는 끝났습니다.</span>
             </h1>
 
             <p className="text-base sm:text-lg text-stone-600 leading-relaxed mb-6 sm:mb-8 max-w-lg">
-              중소기업 경리인 어머니의 업무를 3시간 만에 자동화해드렸습니다.
+              반복 행정에 쓰던 시간, 이제 진짜 중요한 일에 쓰세요.
               <span className="hidden sm:inline"><br /></span>{' '}
-              설명하기도 귀찮은 그 업무, <strong className="text-stone-900">맞춤 프로그램 하나로 간단히 해결됩니다.</strong>
+              <strong className="text-stone-900">설명만 해주시면 나머지는 저희가 합니다.</strong>
             </p>
 
             {/* Highlights */}

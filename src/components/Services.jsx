@@ -1,53 +1,53 @@
 import {
-  FolderOpen,
-  Mail,
-  Globe,
-  Plug,
   FileText,
+  Mail,
+  BarChart2,
+  MessageCircle,
+  Instagram,
   Clock,
   TrendingUp,
 } from 'lucide-react'
 
 const services = [
   {
-    icon: FolderOpen,
+    icon: FileText,
     iconColor: 'text-amber-600',
     iconBg: 'bg-amber-100 border-amber-200',
-    title: '파일 취합 & 보고서 자동 생성',
-    desc: '여러 팀에서 받은 엑셀 파일을 하나로 합치고, 보고서 양식에 맞춰 자동으로 정리합니다. 매주·매월 반복하던 그 작업, 이제 버튼 하나로 끝납니다.',
-    tags: ['Excel', 'Python', 'Google Sheets'],
+    title: '견적서·계약서·인보이스 자동 생성',
+    desc: '문의가 들어오면 견적서가 자동으로 만들어지고 발송됩니다. 매번 직접 작성하던 그 시간, 이제 없어도 됩니다.',
+    tags: ['PDF', 'Excel', '카카오 알림'],
+  },
+  {
+    icon: BarChart2,
+    iconColor: 'text-emerald-600',
+    iconBg: 'bg-emerald-100 border-emerald-200',
+    title: '클라이언트 보고서 자동화',
+    desc: '작업 내역·성과 데이터를 자동으로 정리해 보고서로 만들어드립니다. 매달 반복하던 정리 작업, 버튼 하나로 끝납니다.',
+    tags: ['Google Sheets', 'Excel', 'Notion'],
+  },
+  {
+    icon: MessageCircle,
+    iconColor: 'text-rose-600',
+    iconBg: 'bg-rose-100 border-rose-200',
+    title: 'CS 자동 응답',
+    desc: '자주 오는 문의는 자동으로 답변하고, 중요한 건 알림으로 받습니다. 혼자서도 CS가 돌아가는 구조를 만들어드립니다.',
+    tags: ['카카오', '이메일', 'Discord'],
+  },
+  {
+    icon: Instagram,
+    iconColor: 'text-orange-600',
+    iconBg: 'bg-orange-100 border-orange-200',
+    title: '콘텐츠·SNS 자동화',
+    desc: '포스팅 예약, 댓글 관리, 콘텐츠 수집까지 자동화합니다. 직접 운영하며 인스타그램 1.5만을 키운 경험을 녹였습니다.',
+    tags: ['인스타그램', '블로그', '예약 포스팅'],
   },
   {
     icon: Mail,
-    iconColor: 'text-rose-600',
-    iconBg: 'bg-rose-100 border-rose-200',
-    title: '대량 메일 & 알림 자동 발송',
-    desc: '수십·수백 명에게 개인화된 메일을 자동으로 발송합니다.',
-    tags: ['Gmail', 'Discord', '카카오'],
-  },
-  {
-    icon: Globe,
     iconColor: 'text-teal-600',
     iconBg: 'bg-teal-100 border-teal-200',
-    title: '웹 데이터 자동 수집',
-    desc: '사이트에서 매일 반복하던 데이터 복사·붙여넣기, 자동화합니다.',
-    tags: ['크롤링', 'Playwright'],
-  },
-  {
-    icon: Plug,
-    iconColor: 'text-orange-600',
-    iconBg: 'bg-orange-100 border-orange-200',
-    title: '시스템 간 데이터 연동',
-    desc: 'ERP, 그룹웨어, 엑셀 사이에서 수작업으로 옮기던 데이터를 자동으로 연결합니다.',
-    tags: ['ERP', '그룹웨어', 'Google Sheets', 'Notion'],
-  },
-  {
-    icon: FileText,
-    iconColor: 'text-emerald-600',
-    iconBg: 'bg-emerald-100 border-emerald-200',
-    title: '양식 입력 & 문서 자동화',
-    desc: '반복 입력하는 서류·양식, 데이터만 넣으면 자동으로 완성됩니다.',
-    tags: ['PDF', 'Excel', 'Word'],
+    title: '반복 메일 & 알림 자동 발송',
+    desc: '개인화된 메일을 자동으로 발송하고, 원하는 채널로 알림을 연결합니다.',
+    tags: ['Gmail', '카카오', 'Discord'],
   },
   {
     icon: Clock,
@@ -70,10 +70,10 @@ export default function Services() {
             이런 업무를 자동화합니다
           </div>
           <h2 id="services-heading" className="text-3xl sm:text-4xl font-bold text-stone-900 mb-4">
-            "이거 자동화 되나요?" — 됩니다.
+            반복 작업에 소중한 시간을 사용하지 마세요.
           </h2>
           <p className="text-lg text-stone-500 max-w-2xl mx-auto">
-            설명하기 귀찮았던 그 반복 업무, 막상 맡기면 생각보다 쉽게 해결됩니다.
+            자동화한 대표님들은 이 업무, 이제 안 합니다.
           </p>
         </div>
 

@@ -3,7 +3,7 @@ import { ArrowRight, Quote } from 'lucide-react'
 const testimonials = [
   {
     quote: '매달 반복하던 정산 작업이 6시간에서 10분으로 줄었어요. 처음 실행했을 때 진짜 이게 되는 건지 믿기지 않았습니다.',
-    author: '중소기업 경리 담당 (40대)',
+    author: '정산 업무 담당자',
   },
   {
     quote: '생각만 하던 기획안을 실제로 실현해볼 수 있도록 해주셨어요! 비용이 저렴하다 보니 처음에는 큰 기대를 안 한 것도 사실인데, 시작하고 나니 제가 잘못 생각했더라구요. 실력도 좋으시고 궁금한 부분도 답변 잘 해주셔서 너무 좋았습니다!',
@@ -23,22 +23,22 @@ export default function Testimonials() {
           {/* Left: Story */}
           <div>
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-100 text-orange-700 text-sm font-medium mb-6">
-              시작한 이유
+              직접 써봤으니까요
             </div>
             <h2 id="story-heading" className="text-3xl sm:text-4xl font-bold text-stone-900 mb-6">
-              직장인 어머니의<br />
-              <span className="text-amber-700">야근이 사라지던 날</span>
+              대표님의 하루,<br />
+              <span className="text-amber-700">저도 똑같이 살아봤습니다</span>
             </h2>
             <div className="space-y-4 text-stone-600 leading-relaxed">
               <p>
-                저희 어머니는 중소기업 경리로 일하십니다. 매년 같은 시기가 되면 며칠씩 야근을 하셨는데, 알고 보니 매번 똑같은 작업의 반복이었습니다.
+                저도 1인으로 시작했습니다. 인스타 1.5만까지 직접 키웠고, CS도 직접 받았습니다. CS 답변에 하루 2시간, 견적서 작성에 매주 5시간 — 그냥 조용히, 매주 그렇게 사라지고 있었습니다.
               </p>
               <p>
-                직접 자동화 프로그램을 만들어드렸습니다. 처음 실행하는 날, 어머니가 감동받으셨습니다. 며칠씩 걸리던 일이 몇 분 만에 끝났으니까요.
+                처음 제대로 돌아가는 걸 봤을 때, '이게 되네'가 아니라 '그동안 내가 뭘 하고 있었지'가 먼저 들었습니다.
               </p>
               <p className="font-medium text-stone-800">
-                이런 분들이 정말 많을 거라고 생각했습니다.<br />
-                설명하기는 귀찮고 어렵지만, 막상 맡기면 쉽게 해결되는 일들.
+                지금 이 페이지를 보고 계신다면, 그때 제 모습이 어딘가 겹쳐보이실 수도 있습니다.<br />
+                그래서 Consolve를 시작했습니다.
               </p>
             </div>
             <a
@@ -53,7 +53,7 @@ export default function Testimonials() {
 
           {/* Right: Testimonials */}
           <div>
-            <p className="text-base font-bold text-stone-800 mb-5">어머니만의 이야기가 아니었습니다.</p>
+            <p className="text-base font-bold text-stone-800 mb-5">저만의 이야기가 아니었습니다.</p>
             <ul className="space-y-4">
               {testimonials.map((t) => (
                 <li

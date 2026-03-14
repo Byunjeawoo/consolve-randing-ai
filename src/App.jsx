@@ -29,7 +29,7 @@ export default function App() {
         <Process />
         <Testimonials />
         <Pricing />
-        <FAQ />
+<FAQ />
         <Contact />
       </main>
       <Footer onPrivacyOpen={() => setPrivacyOpen(true)} />
